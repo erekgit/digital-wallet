@@ -1,4 +1,4 @@
-package com.siu.jay.e_wallet;
+package com.test.test;
 
 import android.content.Intent;
 import android.graphics.Paint;

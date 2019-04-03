@@ -1,4 +1,4 @@
-package com.siu.jay.e_wallet;
+package com.test.test;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
    COMP4521 Wong Pak Hing 20212714 phwongag@connect.ust.hk*/
 
 public class Registration extends AppCompatActivity implements View.OnClickListener{
-    private String[]items = {"+852", "+86"};
+    private String[]items = {"+1"};
     private String selectedValue, firstNameInput, lastNameInput, passwordInput, conPasswordInput, phoneInput;
     private Spinner regSpinner;
     private String myPhoneNumber;
@@ -210,16 +210,16 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             Matcher conPhoneMatcher = hkPhoneCheck.matcher(phoneInput);
             if(conPhoneMatcher.find()){return true;} //&& myPhoneNumber.equals(phoneInput)
             else{
-                editPhone.setError("Your phone number is invalid or empty");
-                return false;
+                //editPhone.setError("Your phone number is invalid or empty");
+                return true;
             }
         }
         else{
             Matcher conPhoneMatcher = chinaPhoneCheck.matcher(phoneInput);
             if(conPhoneMatcher.find()){return true;}
             else{
-                editPhone.setError("Your phone number is invalid or empty");
-                return false;
+                //editPhone.setError("Your phone number is invalid or empty");
+                return true;
             }
         }
 

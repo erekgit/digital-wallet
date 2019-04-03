@@ -1,4 +1,4 @@
-package com.siu.jay.e_wallet;
+package com.test.test;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -155,72 +155,72 @@ public class AddCard extends AppCompatActivity implements View.OnClickListener{
     private boolean haveEnoughCardSpace(){
         if(noOfCards.equals("0") || noOfCards.equals("1") || noOfCards.equals("2")){
             String newCardNumber = editCardNo.getText().toString();
-                switch(selectedValue){
-                    case "004 HSBC":
-                        switch(noOfCards){
-                            case "0":
-                                mCurrentUser.child("card_1").setValue("HSBC");
-                                mCurrentUser.child("card_1_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("1");
-                                break;
-                            case "1":
-                                mCurrentUser.child("card_2").setValue("HSBC");
-                                mCurrentUser.child("card_2_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("2");
-                                break;
-                            case "2":
-                                mCurrentUser.child("card_3").setValue("HSBC");
-                                mCurrentUser.child("card_3_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("3");
-                                break;
-                        }
-                        break;
+            switch(selectedValue){
+                case "004 HSBC":
+                    switch(noOfCards){
+                        case "0":
+                            mCurrentUser.child("card_1").setValue("HSBC");
+                            mCurrentUser.child("card_1_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("1");
+                            break;
+                        case "1":
+                            mCurrentUser.child("card_2").setValue("HSBC");
+                            mCurrentUser.child("card_2_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("2");
+                            break;
+                        case "2":
+                            mCurrentUser.child("card_3").setValue("HSBC");
+                            mCurrentUser.child("card_3_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("3");
+                            break;
+                    }
+                    break;
 
-                    case "012 BOC":
-                        switch(noOfCards){
-                            case "0":
-                                mCurrentUser.child("card_1").setValue("BOC");
-                                mCurrentUser.child("card_1_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("1");
-                                break;
-                            case "1":
-                                mCurrentUser.child("card_2").setValue("BOC");
-                                mCurrentUser.child("card_2_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("2");
-                                break;
-                            case "2":
-                                mCurrentUser.child("card_3").setValue("BOC");
-                                mCurrentUser.child("card_3_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("3");
-                                break;
-                        }
-                        break;
+                case "012 BOC":
+                    switch(noOfCards){
+                        case "0":
+                            mCurrentUser.child("card_1").setValue("BOC");
+                            mCurrentUser.child("card_1_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("1");
+                            break;
+                        case "1":
+                            mCurrentUser.child("card_2").setValue("BOC");
+                            mCurrentUser.child("card_2_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("2");
+                            break;
+                        case "2":
+                            mCurrentUser.child("card_3").setValue("BOC");
+                            mCurrentUser.child("card_3_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("3");
+                            break;
+                    }
+                    break;
 
-                    case "024 HS":
-                        switch(noOfCards){
-                            case "0":
-                                mCurrentUser.child("card_1").setValue("HS");
-                                mCurrentUser.child("card_1_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("1");
-                                break;
-                            case "1":
-                                mCurrentUser.child("card_2").setValue("HS");
-                                mCurrentUser.child("card_2_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("2");
-                                break;
-                            case "2":
-                                mCurrentUser.child("card_3").setValue("HS");
-                                mCurrentUser.child("card_3_number").setValue(newCardNumber);
-                                mCurrentUser.child("numberOfCards").setValue("3");
-                                break;
-                        }
-                        break;
-                }
+                case "024 HS":
+                    switch(noOfCards){
+                        case "0":
+                            mCurrentUser.child("card_1").setValue("HS");
+                            mCurrentUser.child("card_1_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("1");
+                            break;
+                        case "1":
+                            mCurrentUser.child("card_2").setValue("HS");
+                            mCurrentUser.child("card_2_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("2");
+                            break;
+                        case "2":
+                            mCurrentUser.child("card_3").setValue("HS");
+                            mCurrentUser.child("card_3_number").setValue(newCardNumber);
+                            mCurrentUser.child("numberOfCards").setValue("3");
+                            break;
+                    }
+                    break;
+            }
             return true;
-            }
-            else{
-               return false;
-            }
         }
+        else{
+            return false;
+        }
+    }
 
 }

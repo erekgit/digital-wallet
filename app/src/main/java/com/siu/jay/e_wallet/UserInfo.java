@@ -1,4 +1,4 @@
-package com.siu.jay.e_wallet;
+package com.test.test;
 
 /* COMP4521 Siu Chit 20270807 csiuab@connect.ust.hk
    COMP4521 Wong Pak Hing 20212714 phwongag@connect.ust.hk*/

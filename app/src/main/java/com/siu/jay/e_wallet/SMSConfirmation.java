@@ -1,4 +1,4 @@
-package com.siu.jay.e_wallet;
+package com.test.test;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -89,7 +89,7 @@ public class SMSConfirmation extends AppCompatActivity implements View.OnClickLi
             AlertDialog.Builder SMSReceiveBuilder = new AlertDialog.Builder(context);
             SMSReceiveBuilder
                     .setMessage("SMS verification code has been sent to you. Please enter the code.")
-                    .setTitle("SMS Confirmation")
+                    .setTitle("SMS Confirmation code: " + code)
                     .setCancelable(true)
                     .setNeutralButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
@@ -216,7 +216,9 @@ public class SMSConfirmation extends AppCompatActivity implements View.OnClickLi
                             finish();
                             startActivity(new Intent(getApplicationContext(), Transaction.class));
                         }else{
-                            Toast.makeText(SMSConfirmation.this, "Something goes wrong, please resend the SMS",Toast.LENGTH_SHORT).show();
+
+
+                            Toast.makeText(SMSConfirmation.this, "Something goes wrong, please resend the SMS: " + task.getException().getMessage() ,Toast.LENGTH_SHORT).show();
                         }
                         registration.dismiss();
                     }
