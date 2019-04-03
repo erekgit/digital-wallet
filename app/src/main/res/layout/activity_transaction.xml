@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/transaction_bg"
-    tools:context="com.siu.jay.e_wallet.Transaction">
+    tools:context="com.test.test.Transaction">
 
 
     <Button

@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/background_gradiet"
-    tools:context="com.siu.jay.e_wallet.SignIn">
+    tools:context="com.test.test.SignIn">
 
     <TextView
         android:text="USER NAME* (phone no)"

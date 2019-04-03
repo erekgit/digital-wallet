@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.siu.jay.e_wallet"
+        applicationId "com.test.test"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
@@ -19,6 +19,29 @@ android {
     }
     productFlavors {
     }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+}
+
+ext {
+    swagger_annotations_version = "1.5.0"
+    gson_version = "2.3.1"
+    httpmime_version = "4.5.2"
+    httpcore_version = "4.4.4"
+    httpclient_version = "4.3.3"
+    volley_version = "1.0.0"
+    junit_version = "4.12"
+    robolectric_version = "3.0"
+    concurrent_unit_version = "0.4.2"
 }
 
 dependencies {
@@ -34,5 +57,26 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:10.2.6'
     compile 'com.google.firebase:firebase-database:10.2.6'
     compile 'com.google.firebase:firebase-core:10.2.6'
+
+   // compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile 'com.android.volley:volley:1.1.1'
+    //compile 'io.swagger:swagger-android-client:1.0.0'
+    //compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    //compile 'com.google.code.gson:gson:2.8.5'
+    //compile 'org.apache.httpcomponents:httpmime:4.3.1'
+
+    compile "io.swagger:swagger-annotations:$swagger_annotations_version"
+    compile "com.google.code.gson:gson:$gson_version"
+    compile "org.apache.httpcomponents:httpcore:$httpcore_version"
+    compile "org.apache.httpcomponents:httpmime:$httpmime_version"
+
+    //compile "io.swagger:swagger-android-client:1.0.0"
+  // compile "org.apache.httpcomponents:httpclient-android:$httpclient_version"
+   // compile "com.android.volley:volley:${volley_version}"
+   // testCompile "junit:junit:$junit_version"
+  /*  testCompile "org.robolectric:robolectric:${robolectric_version}"
+    testCompile "net.jodah:concurrentunit:${concurrent_unit_version}"
+*/
+
 }
 apply plugin: 'com.google.gms.google-services'
