@@ -182,7 +182,7 @@ public class Transaction extends AppCompatActivity implements View.OnClickListen
                 String url = "https://www.google.com/search?q=Android+GET+request";
                 UserApi user = new UserApi();
 
-                url = "https://petstore.swagger.io/v2/user/test";
+                url = "https://petstore.swagger.io/v2/user/test1";
                 //ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
 
